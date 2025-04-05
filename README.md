@@ -29,3 +29,6 @@ streamlit run gc_gut_analyzer_app.py
 - `README.md`: This file
 
 Enjoy analyzing genomes! 🚀
+
+---
+**Developed by: Dr. Keshab Nath**
