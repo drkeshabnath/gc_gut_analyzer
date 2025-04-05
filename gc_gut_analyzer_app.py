@@ -5,6 +5,7 @@ import streamlit as st
 from Bio import SeqIO
 import matplotlib.pyplot as plt
 import random
+import io
 
 st.set_page_config(page_title="GC-Gut Analyzer", layout="centered")
 st.title("🧬 GC-Gut Analyzer - Microbiome Insight Tool")
@@ -13,7 +14,9 @@ st.title("🧬 GC-Gut Analyzer - Microbiome Insight Tool")
 uploaded_file = st.file_uploader("Upload a FASTA file", type=["fasta", "fa"])
 
 if uploaded_file is not None:
-    record = next(SeqIO.parse(uploaded_file, "fasta"))
+    # Convert binary file to text stream for Biopython
+    text_io = io.StringIO(uploaded_file.getvalue().decode("utf-8"))
+    record = next(SeqIO.parse(text_io, "fasta"))
     seq = str(record.seq).upper()
     st.success(f"Sequence loaded: {record.id} ({len(seq)} bases)")
 
