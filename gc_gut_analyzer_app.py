@@ -8,7 +8,7 @@ import random
 import io
 
 st.set_page_config(page_title="GC-Gut Analyzer", layout="centered")
-st.title("🧬 GC-Gut Analyzer - Microbiome Insight Tool")
+st.title("🧬 GC-Gut Analyzer - Microbiome Insight Tool [Developed by: Dr. Keshab Nath]")
 
 # Upload FASTA file
 uploaded_file = st.file_uploader("Upload a FASTA file", type=["fasta", "fa"])
