@@ -10,7 +10,7 @@ import pandas as pd
 from collections import Counter
 
 st.set_page_config(page_title="GC-Gut Analyzer", layout="centered")
-st.title("🧬 GC-Gut Analyzer - Microbiome Insight Tool")
+st.title("🧬 GC-Gut Analyzer - Microbiome Insight Tool [Dr. Keshab Nath]")
 
 uploaded_file = st.file_uploader("Upload a FASTA file", type=["fasta", "fa"])
 
